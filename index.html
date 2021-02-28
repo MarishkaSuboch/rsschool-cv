@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>CV</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div>
+          <h2>Name:</h2>
+          <p>Maryna Subach</p>
+          <h2>Contact me:</h2>
+          <p>marinasuboch@gmail.com</p>
+          <h2>Summary:</h2>
+          <p>I'm a software developer with 5+ years of experiance in .Net. I'd like to learn more about java script.</p>
+        </div>
+        <div>
+          <img src="images/photo.jpg" alt="photo" height="200px">
+        </div>
+      </div>
+      <div>
+        <h2>Skills:</h2>
+        <div>
+          <h3>Languages & Technologies:</h3>
+          <ul>
+            <li>C#</li>
+            <li>.Net Framework 2.0-4.8</li>
+            <li>ASP.Net</li>
+            <li>VBScript</li>
+            <li>.NetCore 3.1</li>
+            <li>Web Api</li>
+            <li>Docker</li>
+            <li>AutoMapper</li>
+            <li>RabbitMQ</li>
+            <li>WinForms</li>
+            <li>WPF</li>
+            <li>MS Visual Studio 2008-2019</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Databases & ORM:</h3>
+          <ul>
+            <li>MySQL</li>
+            <li>MS SQL</li>
+            <li>PostgreSQL</li>
+            <li>Ado.Net</li>
+            <li>Entity Framework</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Version Control Systems:</h3>
+          <ul>
+            <li>GIT</li>
+            <li>SVN</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Automation tools:</h3>
+          <ul>
+            <li>ReSharper</li>
+            <li>NUnit</li>
+            <li>StyleCop</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>Code example:</h2>
+        <code>
+          private readonly IBasketRepository _repository;
+          private readonly IMapper _mapper;
+          private readonly EventBusRabbitMqProducer _eventBus;
+
+          public BasketController(IBasketRepository repository, IMapper mapper, EventBusRabbitMqProducer eventBus)
+          {
+            _repository = repository;
+            _mapper = mapper;
+            _eventBus = eventBus;
+          }
+
+          [HttpGet]
+          [ProducesResponseType(typeof(BasketCart), (int)HttpStatusCode.OK)]
+          public async Task<ActionResult<BasketCart>> GetBasket(string userName)
+          {
+            var basket = await _repository.GetBasket(userName);
+            return Ok(basket);
+          }
+
+          [HttpPost]
+          [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
+          public async Task<ActionResult<BasketCart>> UpdateBasket([FromBody] BasketCart basket)
+          {
+            return Ok(await _repository.UpdateBasket(basket));
+          }
+        </code>
+      </div>
+      <div>
+        <h2>Work experience:</h2>
+        <ul>
+          <li>
+            <p>09/2018-01/2021 iTechArt, Software Developer, Belarus, Minsk.</p>
+            <p>Several projects:</p>
+            <ul>
+              <li>AIBolit</li>
+              <li>ConnectRad</li>
+              <li>SMS ans SMS Web Portal</li>
+            </ul>
+          </li>
+          <li>
+            <p>07/2015-09/2018 Peleng, Software Developer, Belarus, Minsk. </p>
+            <p>Several internal projects:</p>
+            <ul>
+              <li>Translator</li>
+              <li>Virtual File System</li>
+              <li>Data processing
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Education and courses:</h2>
+        <ul>
+          <li>Software developer, Faculty of Engineering, A.A., Baranovichi State University</li>
+          <li>ASP.Net Developer, 2019, Educational Center of High-Tech Park Belarus</li>
+          <li>Microservices Architecture and Implamentation on .Net5, 2021, Udemy</li>
+          <li>Unit Testing for C# Developers, 2021, Udemy</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Languages</h2>
+        <ul>
+          <li>English - B1</li>
+          <li>Polish - A1</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
