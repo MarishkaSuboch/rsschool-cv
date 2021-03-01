@@ -1,0 +1,40 @@
+body{
+  margin: 0 10%;
+  background-color: #E4F9F5;
+}
+h2{
+  text-align: center;
+}
+hr{
+  border: dotted #96e8d9 6px;
+  border-bottom: none;
+  width: 5%;
+  margin: 20px auto;
+}
+.main-div{
+  margin: auto;
+}
+.picture{
+  float: left;
+  margin-right: 20px;
+}
+.round-img {
+    border-radius: 100px;
+    box-shadow: 0 0 7px #666;
+}
+.intro{
+  position: relative;
+  min-height: 200px;
+}
+.skills{
+  display: block;
+  position: relative;
+}
+.skills-div{
+  min-height: 70px;
+}
+.skills-h3{
+  float: left;
+  width: 20%;
+  margin-top: 0
+}
