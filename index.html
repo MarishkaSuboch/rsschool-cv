@@ -3,78 +3,93 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CV</title>
+       <link rel="stylesheet" href="css/style.css"> 
+       <title>CV</title>
   </head>
   <body>
-    <div class="main-div">
-      <div class="intro">
-        <div class="picture">
-          <img class="round-img" src="images/photo.jpg" alt="photo" height="200px">
-        </div>
-        <div>
-          <h1>Maryna Subach</h1>
-          <p><b>email:</b> marinasuboch@gmail.com</p>
-          <p>I'm a software developer with 5+ years of experiance in .Net. I'd like to learn more about java script.</p>
-        </div>
+    <div class="div-main">
+    <header>
+      <div class="left-part">
+        <img class="round-img" src="images/photo.jpg" alt="photo">
+        <p>5+ years of experiance</p>
       </div>
-      <hr />
-      <div class="skills">
-        <h2>Skills</h2>
-        <div class="skills-div">
-          <h3 class="skills-h3">Languages & Technologies:</h3>
-          <p> C#, .Net Framework 2.0-4.8, ASP.Net, VBScript, .NetCore 3.1, Web Api, Docker, AutoMapper, RabbitMQ, WinForms, WPF, MS Visual Studio 2008-2019</p>
-        </div>
-        <div class="skills-div">
-          <h3 class="skills-h3">Databases & ORM:</h3>
-          <p>MySQL, MS SQL, PostgreSQL, Ado.Net, Entity Framework</p>
-        </div>
-        <div class="skills-div">
-          <h3 class="skills-h3">Version Control Systems:</h3>
-          <p>GIT, SVN</p>
-        </div>
-        <div class="skills-div">
-          <h3 class="skills-h3">Automation tools:</h3>
-          <p>ReSharper, NUnit, StyleCop</p>
-        </div>
+      <div class="left-margin">
+        <h1>Maryna Subach</h1>
+        <h2>Software developer</h2>
+        <nav>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </nav>
       </div>
-      <hr />
-      <div>
-        <h2>Code example:</h2>
-        <pre>
-        <code>
-private readonly IBasketRepository _repository;
-private readonly IMapper _mapper;
-private readonly EventBusRabbitMqProducer _eventBus;
 
-public BasketController(IBasketRepository repository, IMapper mapper,
-  EventBusRabbitMqProducer eventBus)
-{
-  _repository = repository;
-  _mapper = mapper;
-  _eventBus = eventBus;
-}
-
-[HttpGet]
-[ProducesResponseType(typeof(BasketCart), (int)HttpStatusCode.OK)]
-public async Task<ActionResult<BasketCart>> GetBasket(string userName)
-{
-  var basket = await _repository.GetBasket(userName);
-  return Ok(basket);
-}
-
-[HttpPost]
-[ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
-public async Task<ActionResult<BasketCart>> UpdateBasket([FromBody] BasketCart basket)
-{
-  return Ok(await _repository.UpdateBasket(basket));
-}
-        </code>
-        </pre>
-      </div>
-      <hr />
-      <div>
-        <h2>Work experience:</h2>
+    </header>
+    <main>
+    <aside class="left-part">
+      <article>
+        <h3>Contact me</h3>
+        <ul class="ul-padding">
+          <li>
+            <h4>Phone number:</h4>
+            <a href="tel:+48666510161">+48666510161</a>
+          </li>
+          <li>
+            <h4>Skype:</h4>
+            <a href="skype:marishkasuboch?chat">marishkasuboch</a>
+          </li>
+          <li>
+            <h4>E-mail:</h4>
+            <a href="mailto:marinasuboch@gmail.com">marinasuboch@gmail.com</a>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>Languages</h3>
+        <ul class="ul-padding">
+          <li>
+            <div class="div-stars">
+              <h4 class="h4-width">Russian</h4>
+              <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </div>
+          </li>
+          <li>
+            <div class="div-stars">
+              <h4 class="h4-width">Belarussian</h4>
+              <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            </div>
+          </li>
+          <li>
+            <div class="div-stars">
+            <h4 class="h4-width">English</h4>
+            <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+          </div>
+          </li>
+          <li>
+            <div class="div-stars">
+            <h4 class="h4-width">Polish</h4>
+            <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+          </div>
+          </li>
+        </ul>
+      </article>
+    </aside>
+    
+    <div class="left-margin">
+      <article>
+        <h3>About me</h3>
+        <p>I'm a software developer with 5+ years of experiance in .Net. I'd like to learn more about java script.</p>
+      </article>
+      <article>
+        <h3>Education</h3>
+        <p>Software Engineer, Faculty of Engineering, A.A., <em>Baranovichi State University, 2010-2015</em></p>
+      </article>
+      <article>
+        <h3>Courses</h3>
+        <p>ASP.Net Developer, <em>Educational Center of High-Tech Park Belarus, 2019</em></p>
+        <p>Microservices Architecture and Implamentation on .Net5, <em>Udemy, 2021</em></p>
+        <p>Unit Testing for C# Developers, <em>Udemy, 2021</em></p>
+      </article>
+      <article>
+        <h3>Work experience</h3>
         <p><b>09/2018-01/2021</b> iTechArt, Software Developer, Belarus, Minsk.</p>
         <p><em>Several projects:</em></p>
           <ul>
@@ -90,21 +105,208 @@ public async Task<ActionResult<BasketCart>> UpdateBasket([FromBody] BasketCart b
           <li>Data processing
           </li>
         </ul>
-      </div>
-      <hr />
-      <div>
-        <h2>Education and courses:</h2>
-        <p>Software developer, Faculty of Engineering, A.A., <em>Baranovichi State University</em></p>
-        <p>ASP.Net Developer, 2019, <em>Educational Center of High-Tech Park Belarus</em></p>
-        <p>Microservices Architecture and Implamentation on .Net5, 2021, <em>Udemy</em></p>
-        <p>Unit Testing for C# Developers, 2021, <em>Udemy</em></p>
-      </div>
-      <hr />
-      <div>
-        <h2>Languages</h2>
-          <p>English - B1</p>
-          <p>Polish - A1</p>
-      </div>
+      </article>
+      <article>
+        <h3>Skills</h3>
+        <details>
+          <summary>Languages & Technologies</summary>
+          <ul>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">C#</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">.Net Framework 2.0-4.8</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">ASP.Net</h4>
+              <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">.NetCore 3.1</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">Web Api</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">Docker</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">AutoMapper</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">RabbitMQ</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">VBScript</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">WinForms</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">WPF</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Databases & ORM</summary>
+          <ul>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">MySQL</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">MS SQL</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">PostgreSQL</h4>
+              <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">Ado.Net</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+            <li>
+              <div class="div-stars">
+              <h4 class="h4-width">Entity Framework</h4>
+              <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            </div>
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Version Control Systems</summary>
+        <ul>
+          <li>
+            <div class="div-stars">
+              <h4 class="h4-width">GIT</h4>
+              <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </div>
+          </li>
+          <li>
+            <div class="div-stars">
+              <h4 class="h4-width">SVN</h4>
+              <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+            </div>
+          </li>
+        </ul>
+        </details>
+        <details>
+          <summary>Automation tools</summary>
+          <ul>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">ReSharper</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">StyleCop</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">NUnit</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Other skills</summary>
+          <ul>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">SOLID</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">Design patterns</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+            <li>
+              <div class="div-stars">
+                <h4 class="h4-width">MS Visual Studio 2008-2019</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+          </ul>
+        </details>
+      </article>
+      <article>
+        <h3>Code example</h3>
+        <details>
+          <summary>WebApi</summary>
+          <pre>
+            <code>
+    private readonly IBasketRepository _repository;
+    private readonly IMapper _mapper;
+    private readonly EventBusRabbitMqProducer _eventBus;
+    
+    public BasketController(IBasketRepository repository, IMapper mapper,
+      EventBusRabbitMqProducer eventBus)
+    {
+      _repository = repository;
+      _mapper = mapper;
+      _eventBus = eventBus;
+    }
+            </code>
+            </pre>
+        </details>
+        
+      </article>
     </div>
+
+    </main>
+    
+    <footer>
+        <p>© Maryna Subach 2021</p>
+    </footer>
+  </div>
   </body>
 </html>
