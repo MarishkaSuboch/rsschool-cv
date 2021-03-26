@@ -1,110 +1,419 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CV</title>
-  </head>
-  <body>
-    <div class="main-div">
-      <div class="intro">
-        <div class="picture">
-          <img class="round-img" src="images/photo.jpg" alt="photo" height="200px">
-        </div>
-        <div>
-          <h1>Maryna Subach</h1>
-          <p><b>email:</b> marinasuboch@gmail.com</p>
-          <p>I'm a software developer with 5+ years of experiance in .Net. I'd like to learn more about java script.</p>
-        </div>
-      </div>
-      <hr />
-      <div class="skills">
-        <h2>Skills</h2>
-        <div class="skills-div">
-          <h3 class="skills-h3">Languages & Technologies:</h3>
-          <p> C#, .Net Framework 2.0-4.8, ASP.Net, VBScript, .NetCore 3.1, Web Api, Docker, AutoMapper, RabbitMQ, WinForms, WPF, MS Visual Studio 2008-2019</p>
-        </div>
-        <div class="skills-div">
-          <h3 class="skills-h3">Databases & ORM:</h3>
-          <p>MySQL, MS SQL, PostgreSQL, Ado.Net, Entity Framework</p>
-        </div>
-        <div class="skills-div">
-          <h3 class="skills-h3">Version Control Systems:</h3>
-          <p>GIT, SVN</p>
-        </div>
-        <div class="skills-div">
-          <h3 class="skills-h3">Automation tools:</h3>
-          <p>ReSharper, NUnit, StyleCop</p>
-        </div>
-      </div>
-      <hr />
-      <div>
-        <h2>Code example:</h2>
-        <pre>
-        <code>
-private readonly IBasketRepository _repository;
-private readonly IMapper _mapper;
-private readonly EventBusRabbitMqProducer _eventBus;
 
-public BasketController(IBasketRepository repository, IMapper mapper,
-  EventBusRabbitMqProducer eventBus)
-{
-  _repository = repository;
-  _mapper = mapper;
-  _eventBus = eventBus;
-}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
 
-[HttpGet]
-[ProducesResponseType(typeof(BasketCart), (int)HttpStatusCode.OK)]
-public async Task<ActionResult<BasketCart>> GetBasket(string userName)
-{
-  var basket = await _repository.GetBasket(userName);
-  return Ok(basket);
-}
+<title>CV</title>
+</head>
 
-[HttpPost]
-[ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
-public async Task<ActionResult<BasketCart>> UpdateBasket([FromBody] BasketCart basket)
-{
-  return Ok(await _repository.UpdateBasket(basket));
-}
-        </code>
-        </pre>
+<body>
+  <div class="div-main">
+    <header>
+      <div class="left-part img-center">
+        <img class="round-img" src="images/photo.jpg" alt="photo">
       </div>
-      <hr />
-      <div>
-        <h2>Work experience:</h2>
-        <p><b>09/2018-01/2021</b> iTechArt, Software Developer, Belarus, Minsk.</p>
-        <p><em>Several projects:</em></p>
-          <ul>
-            <li>AIBolit</li>
-            <li>ConnectRad</li>
-            <li>SMS ans SMS Web Portal</li>
+      <div class="right-part header-info">
+        <h1>Maryna Subach</h1>
+        <h2>Software developer</h2>
+        <h4>5+ years of experience</h4>
+      </div>
+
+    </header>
+    <main>
+      <aside class="left-part">
+        <article>
+          <div class="border-h3">
+            <h3>Contact </h3>
+          </div>
+          <ul class="border-ul">
+            <li>
+              <div class="img-flex">
+                <img src="images/map.png" alt="map" height="15">
+                <p>Poland, Cdańsk</p>
+              </div>
+            </li>
+            <li>
+              <div class="img-flex">
+                <img src="images/phone.png" alt="phone" height="15">
+                <a href="tel:+48666510161">+48666510161</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-flex">
+                <img src="images/skype.png" alt="skype" height="15">
+                <a href="skype:marishkasuboch?chat">marishkasuboch</a>
+              </div>
+            </li>
+            <li>
+              <div class="img-flex">
+                <img src="images/email.png" alt="email" height="15">
+                <a href="mailto:marinasuboch@gmail.com">marinasuboch@gmail.com</a>
+              </div>
+            </li>
           </ul>
-        <p><b>07/2015-09/2018</b> Peleng, Software Developer, Belarus, Minsk. </p>
-        <p><em>Several internal projects:</em></p>
-        <ul>
-          <li>Translator</li>
-          <li>Virtual File System</li>
-          <li>Data processing
-          </li>
-        </ul>
+
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Languages</h3>
+          </div>
+          <ul class="border-ul">
+            <li>
+              <div class="stars-flex">
+                <h4 class="stars-text-width">Russian</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              </div>
+            </li>
+            <li>
+              <div class="stars-flex">
+                <h4 class="stars-text-width">Belarussian</h4>
+                <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              </div>
+            </li>
+            <li>
+              <div class="stars-flex">
+                <h4 class="stars-text-width">English</h4>
+                <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+              </div>
+            </li>
+            <li>
+              <div class="stars-flex">
+                <h4 class="stars-text-width">Polish</h4>
+                <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Interests</h3>
+          </div>
+          <div class="img-interest">
+            <img src="images/foto.png" alt="email" height="60">
+            <img src="images/game.png" alt="email" height="60">
+          </div>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Follow me </h3>
+          </div>
+          <nav>
+            <a href="https://www.linkedin.com/in/maryna-subach-14b075144/"><img src="images/linkedin.png" alt="linkedin"
+                height="60"></a>
+            <a href="https://github.com/MarishkaSuboch?tab=repositories"><img src="images/github.png" alt="github"
+                height="60"></a>
+            <a href="https://www.instagram.com/marishkasuboch/"><img src="images/instagram.png" alt="instagram"
+                height="60"></a>
+          </nav>
+        </article>
+
+      </aside>
+
+      <div class="right-part">
+        <article>
+          <div class="border-h3">
+            <h3>About me</h3>
+          </div>
+          <p>I'm a software developer with 5+ years of experience in .Net. I've had experience in desktop
+            development (winform, wpf) and web development (classic ASP with VBScript). Work with different databases
+            (MySQL, MS SQL, PostgreSQL)
+            Also have a little experience with React. On courses worked with Angular, WebApi, Docker, AutoMapper,
+            microservices.
+            I'd like to learn more about java script.</p>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Education</h3>
+          </div>
+          <p><b>Software Engineer</b>, Faculty of Engineering, A.A., <em>Baranovichi State University, 2010-2015</em>
+          </p>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Courses</h3>
+          </div>
+          <p><b>ASP.Net Developer</b>, <em>Educational Center of High-Tech Park Belarus, 2019</em></p>
+          <p><b>Microservices Architecture and Implamentation on .Net5</b>, <em>Udemy, 2021</em></p>
+          <p><b>Unit Testing for C# Developers</b>, <em>Udemy, 2021</em></p>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Experience</h3>
+          </div>
+          <p><b>Software Developer</b>, iTechArt, Belarus, Minsk.</p>
+          <p><em>09/2018-01/2021</em></p>
+          <ul class="non-style-ul">
+            <li>
+              <details>
+                <summary>AIBolit</summary>
+                <p>AIBolit is an ecosystem platform that merges expertise of AI experts, data scientists,
+                  mathematicians, software engineers and medical specialists. AIBolit.3D provides a
+                  platform for automatic 3D-reconstruction of bones, skin and other organs from the Computed
+                  Tomography series.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>ConnectRad</summary>
+                <p>ConnectRad is a solution which allows radiologists to interpret imaging studies from anywhere as if
+                  the radiologist were in the medical facility's reading room.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>SMS ans SMS Web Portal</summary>
+                <p>SMS is a complex and highly scalable access control system. SMS includes a complete set of tools
+                  and services for site management and real-time control. It can be used to design, manage and
+                  supervise large sites with different security levels, such as hospitals, factories, libraries,
+                  university
+                  campuses etc. SMS Web Portal is a web application which connects to the
+                  fully-functional version of the SMS access system hosted in the intranet.</p>
+              </details>
+            </li>
+          </ul>
+          <p><b>Software Developer</b>, Peleng, Belarus, Minsk. </p>
+          <p><em>07/2015-09/2018</em></p>
+          <ul class="non-style-ul">
+            <li>
+              <details>
+                <summary>Translator</summary>
+                Offline translator for internal programs. The result of the work is integrated into a more complex
+                system and uses the translated words and phrases in other programs.
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Virtual File System</summary>
+                Virtual File System developed for internal file storage. System based on third party library - Dokan.
+                Dokan library contains a user mode DLL and a kernel mode file system driver. All files are stored in
+                the database.
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Data processing</summary>
+                Several programs for processing data from optical equipment in the space industry. All programs
+                work with their own file formats.
+              </details>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Skills</h3>
+          </div>
+          <details>
+            <summary>Languages & Technologies</summary>
+            <ul>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">C#</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">.Net Framework 2.0-4.8</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">ASP.Net</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">.NetCore 3.1</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">Web Api</h4>
+                  <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">Java Script</h4>
+                  <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">Docker</h4>
+                  <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">AutoMapper</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">RabbitMQ</h4>
+                  <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">VBScript</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">WinForms</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">WPF</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>Databases & ORM</summary>
+            <ul>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">MySQL</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">MS SQL</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">PostgreSQL</h4>
+                  <p>&#9733;&#9734;&#9734;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">Ado.Net</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">Entity Framework</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>Version Control Systems</summary>
+            <ul>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">GIT</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">SVN</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>Automation tools</summary>
+            <ul>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">ReSharper</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">StyleCop</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">NUnit</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>Other skills</summary>
+            <ul>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">SOLID</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">Design patterns</h4>
+                  <p>&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                </div>
+              </li>
+              <li>
+                <div class="stars-flex">
+                  <h4 class="stars-text-width">MS Visual Studio 2008-2019</h4>
+                  <p>&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </article>
+        <article>
+          <div class="border-h3">
+            <h3>Code example</h3>
+          </div>
+          <details>
+            <summary>WebApi</summary>
+            <pre>
+            <code>
+    private readonly IBasketRepository _repository;
+    private readonly IMapper _mapper;
+    private readonly EventBusRabbitMqProducer _eventBus;
+    
+    public BasketController(IBasketRepository repository, IMapper mapper,
+      EventBusRabbitMqProducer eventBus)
+    {
+      _repository = repository;
+      _mapper = mapper;
+      _eventBus = eventBus;
+    }
+            </code>
+            </pre>
+          </details>
+
+        </article>
       </div>
-      <hr />
-      <div>
-        <h2>Education and courses:</h2>
-        <p>Software developer, Faculty of Engineering, A.A., <em>Baranovichi State University</em></p>
-        <p>ASP.Net Developer, 2019, <em>Educational Center of High-Tech Park Belarus</em></p>
-        <p>Microservices Architecture and Implamentation on .Net5, 2021, <em>Udemy</em></p>
-        <p>Unit Testing for C# Developers, 2021, <em>Udemy</em></p>
-      </div>
-      <hr />
-      <div>
-        <h2>Languages</h2>
-          <p>English - B1</p>
-          <p>Polish - A1</p>
-      </div>
-    </div>
-  </body>
+    </main>
+
+    <footer>
+      <h5>If you have any questions, please contact me by <a href="mailto:marinasuboch@gmail.com">email</a></h5>
+      <h6>© Maryna Subach, 2021</h6>
+    </footer>
+  </div>
+</body>
+
 </html>

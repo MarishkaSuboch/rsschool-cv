@@ -1,40 +1,126 @@
-body{
-  margin: 0 10%;
-  background-color: #E4F9F5;
+body { 
+  margin-top: 45px;
+  background-color: #bfc7c4;
+  font-family: 'Tinos';
 }
-h2{
+
+h1 {
+  margin: 0;
+} 
+h4, 
+p { 
+  margin: 0;
+}
+
+h2 {
+  margin: 5px 0 0 0
+}
+
+h3 {margin: 3px;}
+
+h5 {
+  margin: 0 3px;
+  padding-top: 10px;
+}
+
+h6 {margin-top: 2px;}
+
+header,
+main { 
+  display: flex; 
+}
+
+nav { text-align: center; }
+
+aside { border-right: 1px solid darkseagreen; }
+
+footer { text-align: center; }
+
+summary { font-weight: bold; }
+
+a:link {
+  color: #176045;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.div-main {
+  width: 70%;
+  margin: auto;
+  background-image: linear-gradient(to right, #b3eed9 0%,#d3f3e8 100%);
+}
+
+.left-part {
+  width: 30%;
+  min-width: 210px;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.img-center {
+  padding-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.round-img {
+  height: 150px;
+  border-radius: 100px;
+  box-shadow: 0 0 7px #666;
+}
+
+.right-part { 
+  max-width: 70%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.header-info {
+  display: inline-grid;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.border-h3 {
+  width: 150px;
+  margin: 10px 0 10px 0;
+  background-image: linear-gradient(to left, transparent 0%,#2bae7e 100%);
+  border-radius: 0 15px 15px 0;
+}
+
+.border-ul {
+  padding: 0;
+  list-style: none;
+}
+
+.border-ul li {
+  padding-left: 3px;
+  border-left: 7px solid #2bae7e;
+}
+
+.img-flex {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.img-flex img {
+  padding-right: 5px;
+}
+
+.stars-flex { 
+  display: flex; 
+  align-items: center;
+}
+
+.stars-text-width { width: 50%; }
+
+.img-interest {
+  padding-bottom: 5px;
   text-align: center;
 }
-hr{
-  border: dotted #96e8d9 6px;
-  border-bottom: none;
-  width: 5%;
-  margin: 20px auto;
+
+.non-style-ul {
+  padding-left: 0;
+  list-style: none;
 }
-.main-div{
-  margin: auto;
-}
-.picture{
-  float: left;
-  margin-right: 20px;
-}
-.round-img {
-    border-radius: 100px;
-    box-shadow: 0 0 7px #666;
-}
-.intro{
-  position: relative;
-  min-height: 200px;
-}
-.skills{
-  display: block;
-  position: relative;
-}
-.skills-div{
-  min-height: 70px;
-}
-.skills-h3{
-  float: left;
-  width: 20%;
-  margin-top: 0
-}
+
